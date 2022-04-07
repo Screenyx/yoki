@@ -1,6 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Pressable, ScrollView, Alert } from 'react-native';
 
+function onScanPress(){
+  alert("Press");
+}
 
 export default function App() {
   return (
@@ -9,7 +12,7 @@ export default function App() {
         <Text style={styles.yokiTitle}>YOKI</Text>
       </View>
       <View style={styles.containerButton}>
-        <Pressable style={styles.buttonScan} onPress={() => Alert.alert('Scan effectué')} >
+        <Pressable style={styles.buttonScan} onPress={onScanPress} >
           <Text style={styles.textScan}>Scanner</Text>
         </Pressable>  
       </View>
